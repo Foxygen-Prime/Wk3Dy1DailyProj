@@ -98,14 +98,28 @@ let formData = [
 // -------- Your Code Goes Below this Line --------
 
 let formHTML = document.getElementById('fields');
-for (i = 0; i < formData.length; i++) {
+for (let i = 0; i < formData.length; i++) {
 
 let inputFOO = document.createElement('input');
 formHTML.appendChild(inputFOO);
 inputFOO.setAttribute('type', formData[i].type);
-inputFOO.setAttribute('label', formData[i].label);
+inputFOO.setAttribute('placeholder', formData[i].label);
 inputFOO.setAttribute('id', formData[i].id);
 inputFOO.setAttribute('icon', formData[i].icon);
 inputFOO.setAttribute('options', formData[i].options);
 
+let langOptions = [];
+for (let j = 0; j < array.length; j++) {
+  landOptions.push(formData[4].options.label., formData[4].options.value.)
 }
+
+}
+
+
+// for (let j = 0; j < formData.length; j++) {
+//   let labelNames = formData.label. {
+//     labelNames.push(formData.label[j].)
+//
+//find every instance of label
+//make every innstance of label = that iteration of //label's value
+//   }
