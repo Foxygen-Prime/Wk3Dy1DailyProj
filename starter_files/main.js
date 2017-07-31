@@ -119,9 +119,8 @@ for (let i = 0; i < formData.length; i++) {
   else formData.type === textarea {
     let textBox = document.createElement('textarea');
     textBox.setAttribute('cols', 'rows');
+    formHTML.appendChild(textBox);
   }
-
-  formHTML.appendChild(textBox)
 
   else {
     let inputFOO = document.createElement('input');
@@ -132,8 +131,7 @@ for (let i = 0; i < formData.length; i++) {
     inputFOO.setAttribute('icon', formData[i].icon);
     inputFOO.setAttribute('options', formData[i].options);
   }
-
-
+  
 }
 
 
