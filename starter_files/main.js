@@ -109,9 +109,9 @@ inputFOO.setAttribute('icon', formData[i].icon);
 inputFOO.setAttribute('options', formData[i].options);
 
 let langOptions = [];
-for (let j = 0; j < array.length; j++) {
-  landOptions.push(formData[4].options.label., formData[4].options.value.)
-}
+// for (let j = 0; j < formData.length; j++) {
+//   landOptions.push(formData[4].options.label, formData[4].options.value)
+// }
 
 }
 
