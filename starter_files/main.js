@@ -99,7 +99,7 @@ let formData = [
 let formHTML = document.getElementById('fields');
 for (let i = 0; i < formData.length; i++) {
 
-  if (formData.type === 'select') {
+  if (formData[i].type === 'select') {
     let selectLang = document.createElement('select');
     let selectlist = document.createElement('option');
     let selLangOpts = formData[i].options;
@@ -116,9 +116,10 @@ for (let i = 0; i < formData.length; i++) {
 
   }
   if
-  else formData.type === textarea {
+  else formData[i].type === textarea {
     let textBox = document.createElement('textarea');
-    textBox.setAttribute('cols', 'rows');
+    textBox.setAttribute('cols');
+    textBox.setAttribute('rows');
     formHTML.appendChild(textBox);
   }
 
@@ -131,7 +132,7 @@ for (let i = 0; i < formData.length; i++) {
     inputFOO.setAttribute('icon', formData[i].icon);
     inputFOO.setAttribute('options', formData[i].options);
   }
-  
+
 }
 
 
