@@ -36,8 +36,7 @@ let formData = [
     "label": "Select Language",
     "id": "user-language",
     "icon": "",
-    "options": [
-      {
+    "options": [{
         "label": "English",
         "value": "EN"
       },
@@ -85,14 +84,14 @@ let formData = [
 // HINTS:
 // As you can see, we access the first element in the array
 // with [0] and then grab the property "label" using the "." operator
-( function(){
+(function() {
   // Select the first element from the array
-  let first = formData[ 0 ];
+  let first = formData[0];
   // Log the first object
-  console.log( first );
+  console.log(first);
   // Log the string "First Name"
-  console.log( first.label );
-} )();
+  console.log(first.label);
+})();
 
 
 // -------- Your Code Goes Below this Line --------
@@ -100,21 +99,44 @@ let formData = [
 let formHTML = document.getElementById('fields');
 for (let i = 0; i < formData.length; i++) {
 
-let inputFOO = document.createElement('input');
-formHTML.appendChild(inputFOO);
-inputFOO.setAttribute('type', formData[i].type);
-inputFOO.setAttribute('placeholder', formData[i].label);
-inputFOO.setAttribute('id', formData[i].id);
-inputFOO.setAttribute('icon', formData[i].icon);
-inputFOO.setAttribute('options', formData[i].options);
+  let inputFOO = document.createElement('input');
+  formHTML.appendChild(inputFOO);
+  inputFOO.setAttribute('type', formData[i].type);
+  inputFOO.setAttribute('placeholder', formData[i].label);
+  inputFOO.setAttribute('id', formData[i].id);
+  inputFOO.setAttribute('icon', formData[i].icon);
+  inputFOO.setAttribute('options', formData[i].options);
 
-let langOptions = [];
-// for (let j = 0; j < formData.length; j++) {
-//   landOptions.push(formData[4].options.label, formData[4].options.value)
-// }
+  if (formData.type === 'select') {
+    let selectLang = document.createElement('select');
+    let selectlist = document.createElement('option');
+    let selLangOpts = formData[i].options;
+
+    selectLang.appendChild(selectlist)
+
+    for (let j = 0; j < dataForm.length; j++) {
+      let newOptions = document.createElement('option')
+      newOptions.setAttribute('label', selLangOpts[j].label);
+      newOptions.setAttribute('value', selLangOpts[j].value);
+      selectLang.appendChild(newOptions);
+    }
+    formHTML.appendChild(selectLang)
+
+  }
+
+} else formData.type === textarea {
+  setAttribute(textarea)
 
 }
 
+}
+
+let langOptions = document.getElementById(formData[4].options)
+}
+// let langOptions = [];
+// for (let j = 0; j < formData.length; j++) {
+//   landOptions.push(formData[4].options.label, formData[4].options.value)
+// }
 
 // for (let j = 0; j < formData.length; j++) {
 //   let labelNames = formData.label. {
